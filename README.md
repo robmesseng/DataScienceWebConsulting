@@ -2,8 +2,9 @@
 
 Welcome to the repository containing the codebase for a dynamic web page designed to showcase data science consulting services tailored to agriculture and aquaculture. This website includes sections for services, portfolio, use cases, and a contact form—everything a forward-thinking consulting service needs to engage clients and convey impact.
 
-![Logo de ScienceMetrics](assets/LOGO.png)
-
+<p align="center">
+  <img src="assets/LOGO.png" alt="Logo de ScienceMetrics" width="400"/>
+</p>
 
 ## Project Structure
 
