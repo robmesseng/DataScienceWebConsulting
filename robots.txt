@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+Allow: /about-us/
+Allow: /FAQ/
+Allow: /portfolio/
+Allow: /services/
+Allow: /sitemap.xml
+Allow: /image-sitemap.xml
+Disallow: /img/
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.css$
+
+User-agent: Googlebot
+Allow: /images/
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Adsbot-Google
+Allow: /
+
+Sitemap: https://www.australmetrics.cl/sitemap.xml
+Sitemap: https://www.australmetrics.cl/image-sitemap.xml
+
+Crawl-delay: 10

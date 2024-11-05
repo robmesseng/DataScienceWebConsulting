@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AustralMetrics ofrece ciencia de datos para acuicultura y agricultura, optimizando eficiencia y sostenibilidad con machine learning.">
+    <meta name="keywords" content="ciencia de datos, agricultura, acuicultura, machine learning, blockchain, IoT, data science">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.australmetrics.cl/">
+    <meta property="og:title" content="AustralMetrics - Ciencia de Datos para Agricultura y Acuicultura">
+    <meta property="og:description" content="Optimiza tu producción con nuestras soluciones de ciencia de datos personalizadas para la industria acuícola y agrícola.">
+    <meta property="og:image" content="https://www.australmetrics.cl/img/og-image.jpg">
+    <!--Apple touch icon-->
+    <link rel="apple-touch-icon" href="img/favicon/apple-icon-120x120.png">
+
+    <title>AustralMetrics - Ciencia de Datos para Agricultura y Acuicultura</title>
+    <!-- Custom css file link-->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font cdn link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="img/favicon/favicon-96x96.png" type="image"> <!--esto es con favicon-->
+</head>
+<body>
+    <!-- Header Site ------------------------------------>
+    <header class="header">
+        <div class="logog">
+            <a href="#" class="logo">
+                <img src="img/LOGO.png" alt="Logo de AustralMetrics">
+            </a>
+        </div>
+        <ul class="navlist">
+            <li><a id="nav1" href="#home">Inicio</a></li>
+            <li><a id="nav2" href="about-us/about-us.html">Sobre Nosotros</a></li>
+            <li><a id="nav3" href="#services">Servicios</a></li>
+            <li><a id="nav4" href="#portfolio">Portafolio</a></li>
+            <li><a id="nav5" href="#use-cases">Casos de Uso</a></li>
+            <li><a id="nav6" href="#data-science">Ciencia de Datos</a></li>
+            <li><a id="nav7" href="#technologies">Métodos y Tecnologías</a></li>
+            <li><a id="nav8" href="#costs">Costos</a></li>
+            <li><a id="nav9" href="FAQ/faq.html">Preguntas Frecuentes</a></li>
+        </ul>     
+        <div id="language-switcher" class="language-switcher">
+            <button id="language-button" class="language-button">
+                <span id="selected-language" class="language-text">Language</span>
+                <img src="img/Languages/triangle.png" alt="Arrow Down" class="arrow-icon">
+            </button>
+            <div id="language-dropdown" class="language-dropdown hidden">
+                <div class="language-option" onclick="changeLanguage('es')">
+                    <span class="language-text">Español</span>
+                    <img src="img/Languages/españa.png" alt="Bandera de España">
+                </div>
+                <div class="language-option" onclick="changeLanguage('en')">
+                    <span class="language-text">English</span>
+                    <img src="img/Languages/eng.png" alt="Bandera de Reino Unido">
+                </div>
+                <div class="language-option" onclick="changeLanguage('fr')">
+                    <span class="language-text">Français</span>
+                    <img src="img/Languages/francia.png" alt="Bandera de Francia">
+                </div>
+                <div class="language-option" onclick="changeLanguage('zh')">
+                    <span class="language-text">中文</span>
+                    <img src="img/Languages/china.png" alt="Bandera de China">
+                </div>
+            </div>
+        </div>                 
+    </header>
+
+    <!-- Home Section ----------------------------------->
+    <section id="home" class="home">       
+        <div class="home-content">
+             <h1 id="page-title" class="main-title">Consultoría en Ciencia de Datos para la Agricultura y Acuicultura</h1>             
+             <p id="page-content" class="main-paragraph">AustralMetrics es un Servicio de Consultoría en Ciencia de Datos especialista en la optimización de producción agrícola y acuícola. A través de modelos predictivos y análisis avanzados, ayudamos a nuestros clientes a maximizar los rendimientos, reducir costos y minimizar el impacto ambiental. Desde la detección temprana de enfermedades hasta la optimización de los recursos, nuestras soluciones personalizadas impulsan la sostenibilidad y la eficiencia en cada etapa de la cadena de producción.</p>
+            <div class="btn-box">
+                <a id="home1" href="#data-science" class="btn">Explora Nuestros Servicios</a>
+                <a id="home2" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@australmetrics.cl&su=Consulta%20sobre%20Servicios%20de%20Ciencia%20de%20Datos&body=Hola,%20estoy%20interesado%20en%20sus%20servicios." target="_blank" class="btn">Consigue una Consulta</a>
+            </div>
+        </div>
+        
+         <div class="home-image">
+            <div class="img-box">
+                <img src="img/Home.svg" alt="Imagen de sección Home">
+            </div>
+        </div>            
+    </section>
+
+    <!-- Services Section -------------------------------->
+     <section id="services" class="services">
+        <div class="services-title">
+            <h2 id="services-title" class="main-title">Servicios de Ciencia de Datos que ofrecemos</h2>
+        </div>
+
+        <div class="section-services">
+            <!-- Service 1 -->
+            <div class="service-box">
+                <div class="service-img">
+                    <img src="img/Services/data-science_consulting.png" alt="Data Science Consulting">
+                </div>
+                <div class="service-content">
+                    <h3 id="services-title-1" class="second-title">Consultoría en Ciencia de Datos</h3>
+                    <p id="service-parr-1">Ya sea que necesites un modelo de aprendizaje automático para resolver una tarea empresarial específica o planees implementar una solución de data science compleja, nuestros analistas de la industria y científicos de datos están listos para ofrecerte una consulta exhaustiva. Con un plan de proyecto detallado y la tecnología óptima que te proporcionamos, obtendrás pasos accionables para transformar los datos en un impulsor de valor.</p>
+                    <div class="btn-box">
+                        <a id="serv1" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@australmetrics.cl&su=Consulta%20sobre%20Servicios%20de%20Ciencia%20de%20Datos&body=Hola,%20estoy%20quisiera%20consultar%20por%20su%20servicio%20de%20Ciencia%20de%20Datos." target="_blank" class="btn">Solicita una Consulta</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-box">
+                <div class="service-img">
+                    <img src="img/Services/software-implementation.png" alt="Data Science Solution Implementation">
+                </div>
+                <div class="service-content">
+                    <h3 id="services-title-2" class="second-title">Implementación de soluciones basadas en la Ciencia de Datos</h3>
+                    <p id="service-parr-2">Nuestros expertos desarrollan soluciones de data science específicas para la industria que promueven la toma de decisiones informadas, optimizan las operaciones, automatizan tareas, incrementan la seguridad, mejoran la experiencia del cliente y proporcionan otros beneficios impulsados por datos. Para proyectos complejos, estamos listos para comenzar con una Prueba de Concepto (PoC) o un Producto Mínimo Viable (MVP).</p>
+                    <div class="btn-box">
+                        <a id="serv2" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@australmetrics.cl&su=Consulta%20sobre%20Servicios%20de%20Ciencia%20de%20Datos&body=Hola,%20estoy%20interesado%20en%20sus%20servicios%20de%20implementación%20de%20Ciencia%20de%20Datos." target="_blank" class="btn">Ir por Implementación</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-box">
+                <div class="service-img">
+                    <img src="img/Services/data-science-evolution.png" alt="Data Science Evolution">
+                </div>
+                <div class="service-content">
+                    <h3 id="services-title-3" class="second-title">Evoluciona con la Ciencia de Datos</h3>
+                    <p id="service-parr-3">Si tu solución de data science necesita alcanzar nuevos objetivos desafiantes, nuestros expertos te ofrecerán orientación estratégica y táctica. Diseñaremos e implementaremos nuevos modelos de aprendizaje automático, así como características y módulos de software, para fortalecer tu solución con capacidades adicionales impulsadas por ML.</p>
+                    <div class="btn-box">
+                        <a id="serv3" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@australmetrics.cl&su=Consulta%20sobre%20Servicios%20de%20Ciencia%20de%20Datos&body=Hola,%20estoy%20interesado%20en%20sus%20servicios%20de%20implementación%20de%20orientación%20estratégica%20con%20mediante%20la%20Ciencia%20de%20Datos." target="_blank" class="btn">Ir por Evolución</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-box">
+                <div class="service-img">
+                    <img src="img/Services/data-science_support.png" alt="Data Science Solution Support">
+                </div>
+                <div class="service-content">
+                    <h3 id="services-title-4" class="second-title">Soporte para soluciones basadas en la Ciencia de Datos</h3>
+                    <p id="service-parr-4">Revisamos de manera regular tus modelos de aprendizaje automático para garantizar su precisión y los ajustamos para asegurar que obtengas información y predicciones de alta calidad. Con un monitoreo proactivo y la resolución eficiente de problemas por parte de un socio de TI confiable, puedes estar seguro de que tu solución funcionará sin inconvenientes.</p>
+                    <div class="btn-box">
+                        <a id="serv4" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@australmetrics.cl&su=Consulta%20sobre%20Servicios%20de%20Ciencia%20de%20Datos&body=Hola,%20estoy%20interesado%20en%20sus%20servicios%20de%20soporte%20de%20modelos%20de%20aprendizaje%20automático." target="_blank" class="btn">Ir por Soporte</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- Portfolio ----------------->
+      <section id="portfolio" class="portfolio">
+        <div class="portfolio-title">
+            <h2 id="portfolio-title" class="main-title">Nuestro Portafolio de Data Science</h2>
+        </div>
+
+        <div class="section-portfolio">
+            <div class="portfolio-box-1">
+                <div class="portfolio-img">
+                    <img src="img/Portfolio/drone.webp" alt="Imagen de Referencia Proyecto de Predicción de Rendimiento de Cultivos">                    
+                </div>
+                <div class="portfolio-parr">
+                    <div class="hastags-links">
+                        <a id="it1" href="https://arxiv.org/pdf/2410.00503" target="_blank">Information Technology</a>
+                        <a id="s1p" href="https://huggingface.co/NchuNLP/Agriculture-Classification">Software products</a>
+                    </div>
+                    <h3 id="portfolio-title-1">Sistema de Predicción de Rendimiento de Cultivos</h3>
+                    <p id="portfolio-parr-1">Este proyecto utiliza aprendizaje automático y datos históricos de clima, suelo y rendimientos para predecir la productividad de cultivos clave como maíz, soja y trigo. Integra datos satelitales y sensores IoT para proporcionar a los agricultores pronósticos precisos y visualizaciones interactivas, permitiéndoles tomar decisiones informadas sobre la siembra y gestión de cultivos.</p>
+                    <div class="btn-box-2">
+                        <a id="vd1" href="portfolio/portfolio1o.html" class="btn">Detalles del sistema de predicción</a>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="portfolio-box-2">
+                <div class="portfolio-img">
+                    <img src="img/Portfolio/monitoring_salmon.webp" alt="Imagen de Referencia Proyecto de Plataforma de Monitoreo de Salud en Salmones">                    
+                </div>
+                <div class="portfolio-parr">
+                    <div class="hastags-links">
+                        <a id="it2" href="https://arxiv.org/pdf/2407.11348" target="_blank">Information Technology</a>
+                        <a id="s2p" href="https://huggingface.co/keras-io/GauGAN-Image-generation">Software products</a>
+                    </div>
+                    <h3 id="portfolio-title-2">Plataforma de Monitoreo de Salud de Salmones</h3>
+                    <p id="portfolio-parr-2">Desarrolla un sistema de vigilancia en tiempo real para la industria salmonera chilena, utilizando visión por computador y análisis de datos para detectar tempranamente enfermedades y parásitos. La plataforma procesa imágenes submarinas y datos de sensores, presentando alertas y dashboards interactivos que permiten a los acuicultores optimizar tratamientos y reducir pérdidas.</p>
+                    <div class="btn-box-2">
+                        <a id="vd2" href="portfolio/portfolio2o.html" class="btn">Detalles de la plataforma de monitoreo de Salmones</a>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="portfolio-box-3">
+                <div class="portfolio-img">
+                    <img src="img/Portfolio/precision_riego.webp" alt="Imagen de Referencia Proyecto de Riego de Precisión">                    
+                </div>
+                <div class="portfolio-parr">
+                    <div class="hastags-links">
+                        <a id="it3" href="https://arxiv.org/pdf/2404.01468" target="_blank">Information Technology</a> 
+                        <a id="s3p" href="https://huggingface.co/YuvrajSingh9886/phi3-mini-fine-tuned-agricultural-irrigation-QnA">Software products</a>
+                    </div>
+                    <h3 id="portfolio-title-3">Optimización de Riego de Precisión</h3>
+                    <p id="portfolio-parr-3">Implementa un sistema de riego inteligente que combina datos de humedad del suelo, previsiones meteorológicas y estados fenológicos de los cultivos. Utiliza algoritmos de optimización para generar planes de riego personalizados, visualizados a través de mapas de calor y gráficos temporales, permitiendo a los agricultores maximizar la eficiencia del uso del agua en regiones propensas a la sequía.</p>
+                    <div class="btn-box-2">
+                        <a id="vd3" href="portfolio/portfolio3o.html" class="btn">Detalles del riego de precisión</a>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="portfolio-box-4">
+                <div class="portfolio-img">
+                    <img src="img/Portfolio/trazabilidad_blockchain.webp" alt="Imagen de Referencia Proyecto de Blockchain en la Industria Agrícola">                    
+                </div>
+                <div class="portfolio-parr">
+                    <div class="hastags-links">
+                        <a id="it4" href="https://arxiv.org/pdf/2401.09476" target="_blank">Information Technology</a>
+                        <a id="s4p" href="https://huggingface.co/huggingtweets/blockchainu-dsocialcommons-schwentker">Software products</a>
+                    </div>
+                    <h3 id="portfolio-title-4">Trazabilidad Blockchain para Productos Agrícola</h3>
+                    <p id="portfolio-parr-4">Crea una plataforma basada en blockchain para rastrear la cadena de suministro de productos agrícolas desde la granja hasta el consumidor. Integra datos de sensores IoT, códigos QR y registros de transporte para ofrecer transparencia total. Incluye un portal web con visualizaciones interactivas de la cadena de suministro, mejorando la confianza del consumidor y facilitando la certificación de productos orgánicos o de comercio justo.</p>
+                    <div class="btn-box-2">
+                        <a id="vd4" href="portfolio/portfolio4o.html" class="btn">Detalles de la trazabilidad Blockchain</a>
+                    </div>                    
+                </div>
+            </div>
+
+            <div class="portfolio-box-5">
+                <div class="portfolio-img">
+                    <img src="img/Portfolio/vineyard.webp" alt="Imagen de Referencia Proyecto de Análisis de Datos en Viñedo">                    
+                </div>
+                <div class="portfolio-parr">
+                    <div class="hastags-links">
+                        <a id="it5" href="https://arxiv.org/pdf/2409.04060" target="_blank">Information Technology</a>
+                        <a id="s5p" href="https://github.com/v6d-io/v6d">Software products</a>
+                    </div>
+                    <h3 id="portfolio-title-5">Método de aumento de datos basado en modelos de difusión guiados por texto para la detección de brotes en viñedos</h3>
+                    <p id="portfolio-parr-5">Desarrolla un propone un método de aumento de datos generativo llamado D4, que utiliza un modelo de difusión guiado por texto para mejorar la detección de brotes en viñedos. Este método aborda los desafíos de la escasez de datos de entrenamiento y la diversidad de dominios en la agricultura, generando imágenes anotadas que preservan la información necesaria para la detección de objetos.</p>
+                    <div class="btn-box-2">
+                        <a id="vd5" href="portfolio/portfolio5o.html" class="btn">Detalles del método de aumento de datos</a>
+                    </div>                    
+                </div>
+            </div>
+            
+        </div> 
+               
+      </section>
+
+      <!-- How to use ----------------->
+      <section id="use-cases" class="use-cases">
+        <div class="use-cases-title">
+            <h2 id="use-cases-title" class="main-title">Cómo se Desarrolla el Proceso de Ciencia de Datos con AustralMetrics</h2>
+        </div>
+
+        <div class="timeline">
+            
+            <div class="container left">
+                <div class="content">
+                    <div class="circle green">
+                        <i class='bx bxs-pin'></i>
+                    </div>
+                    <h3 id="use-cases-title-1">1. Análisis de necesidades empresariales</h3>
+                    <p id="use-cases-content-1a">Delimitación de los objetivos empresariales a cumplir con la ciencia de datos.</p>
+                    <p id="use-cases-content-1b">Definición de problemas con la solución de ciencia de datos existente (si la hay).</p>
+                    <p id="use-cases-content-1c">Decisión sobre los entregables de la ciencia de datos.</p>
+                </div>
+            </div>
+            
+            <div class="container right">
+                <div class="content">
+                    <div class="circle green">
+                        <i class='bx bx-spreadsheet'></i>
+                    </div>
+                    <h3 id="use-cases-title-2">2. Preparación de datos</h3>
+                    <p id="use-cases-content-2a">Determinación de la fuente de datos para la ciencia de datos.</p>
+                    <p id="use-cases-content-2b">Recolección, transformación y limpieza de datos.</p>
+                </div>
+            </div>
+            
+            <div class="container left">
+                <div class="content">
+                    <div class="circle green">
+                        <i class='bx bx-cog'></i>
+                    </div>
+                    <h3 id="use-cases-title-3">3. Diseño y desarrollo del modelo de aprendizaje automático (ML)</h3>
+                    <p id="use-cases-content-3a">Elección de las técnicas y métodos óptimos de ciencia de datos.</p>
+                    <p id="use-cases-content-3b">Definición de los criterios para la futura evaluación del modelo(s) de ML.</p>
+                    <p id="use-cases-content-3c">Desarrollo, entrenamiento, prueba y despliegue del modelo de ML.</p>
+                </div>
+            </div>
+            
+            <div class="container right">
+                <div class="content">
+                    <div class="circle green">
+                        <i class='bx bx-hive' ></i>
+                    </div>
+                    <h3 id="use-cases-title-4">4. Evaluación y ajuste del modelo de ML</h3>
+                </div>
+            </div>
+            
+            <div class="container left">
+                <div class="content">
+                    <div class="circle green">
+                        <i class='bx bx-folder-open' ></i>
+                    </div>
+                    <h3 id="use-cases-title-5">5. Entrega de resultados de la ciencia de datos en un formato acordado</h3>
+                    <p id="use-cases-content-5a">Información de la ciencia de datos lista para uso empresarial en forma de informes y tableros.</p>
+                    <p id="use-cases-content-5b">Aplicación personalizada impulsada por ML para uso autoservicio (opcional).</p>
+                    <p id="use-cases-content-5c">Integración del modelo de ML en otras aplicaciones (opcional).</p>
+                </div>
+            </div>
+            
+            <div class="container right">
+                <div class="content">
+                    <div class="circle green">
+                        <i class='bx bx-git-compare' ></i>
+                    </div>
+                    <h3 id="use-cases-title-6">6. Capacitación de usuarios y administradores, consultas de soporte de ciencia de datos</h3>
+                </div>
+            </div>
+        </div>    
+            
+      </section>
+
+      <!-- Data Science -------------------------------------------->
+      <section id="data-science" class="data-science">
+        <div class="data-science-title">
+            <h2 id="data-science-title" class="main-title">Casos que AustralMetrics abarca con la Ciencia de Datos</h2>
+        </div>
+
+        <div class="use-case-grid">
+            <div class="use-case-item">
+                <div class="icon-container"><img src="img/icons/icon1.png" alt="Icon 1"></div>
+                <h3 id="dst1">Monitoreo y optimización del cultivo</h3>
+                <p id="dsc1">Uso de sensores IoT para monitorear las condiciones del suelo, agua y aire, y análisis de datos para optimizar el riego y la fertilización.</p>
+            </div>
+            <div class="use-case-item">
+                <div class="icon-container"><img src="img/icons/icon2.png" alt="Icon 2"></div>
+                <h3 id="dst2">Gestión de la salud de los animales y plantas</h3>
+                <p id="dsc2">Análisis predictivo para detectar enfermedades en etapas tempranas y modelos de aprendizaje automático para predecir brotes de enfermedades.</p>
+            </div>
+            <div class="use-case-item">
+                <div class="icon-container"><img src="img/icons/icon3.png" alt="Icon 3"></div>
+                <h3 id="dst3">Optimización de la cadena de suministro</h3>
+                <p id="dsc3">Predicción de demanda para ajustar la producción y minimizar desperdicios, y monitoreo en tiempo real del transporte y almacenamiento.</p>
+            </div>
+            <div class="use-case-item">
+                <div class="icon-container"><img src="img/icons/icon4.png" alt="Icon 4"></div>
+                <h3 id="dst4">Calidad del producto</h3>
+                <p id="dsc4">Análisis de datos para asegurar y mejorar la calidad de los productos y uso de visión por computadora para detectar defectos en productos.</p>
+            </div>
+            <div class="use-case-item">
+                <div class="icon-container"><img src="img/icons/icon5.png" alt="Icon 5"></div>
+                <h3 id="dst5">Mantenimiento predictivo de equipos</h3>
+                <p id="dsc5">Análisis de datos de sensores en maquinaria para predecir y prevenir fallos, optimizando los tiempos de mantenimiento.</p>
+            </div>
+            <div class="use-case-item">
+                <div class="icon-container"><img src="img/icons/icon6.png" alt="Icon 6"></div>
+                <h3 id="dst6">Optimización del uso de recursos</h3>
+                <p id="dsc6">Análisis de datos para maximizar la eficiencia en el uso de recursos como agua y energía, implementando prácticas agrícolas sostenibles.</p>
+            </div>
+            <div class="use-case-item">
+                <div class="icon-container"><img src="img/icons/icon7.png" alt="Icon 7"></div>
+                <h3 id="dst7">Análisis de imágenes para monitoreo de cultivos y animales</h3>
+                <p id="dsc7">Uso de drones y satélites para monitorear la salud y crecimiento de los cultivos, y análisis de imágenes para detectar problemas en el ganado.</p>
+            </div>
+            <div class="use-case-item">
+                <div class="icon-container"><img src="img/icons/icon8.png" alt="Icon 8"></div>
+                <h3 id="dst8">Optimización de rutas de entrega</h3>
+                <p id="dsc8">Algoritmos de optimización para planificar rutas de entrega más eficientes, reduciendo costos y tiempos de transporte.</p>
+            </div>
+            <div class="use-case-item">
+                <div class="icon-container"><img src="img/icons/icon9.png" alt="Icon 9"></div>
+                <h3 id="dst9">Personalización de la experiencia del cliente</h3>
+                <p id="dsc9">Análisis de datos de clientes para ofrecer productos y servicios personalizados, mejorando la satisfacción y lealtad del cliente.</p>
+            </div>
+            <div class="use-case-item">
+                <div class="icon-container"><img src="img/icons/icon10.png" alt="Icon 10"></div>
+                <h3 id="dst10">Gestión de riesgos financieros</h3>
+                <p id="dsc10">Análisis de datos para predecir y gestionar riesgos financieros, implementando estrategias para mitigar riesgos económicos.</p>
+            </div>
+            <div class="use-case-item">
+                <div class="icon-container"><img src="img/icons/icon11.png" alt="Icon 11"></div>
+                <h3 id="dst11">Optimización de procesos de ventas</h3>
+                <p id="dsc11">Análisis de datos para identificar oportunidades de ventas y mejorar la eficiencia en los procesos de ventas.</p>
+            </div>
+            <div class="use-case-item">
+                <div class="icon-container"><img src="img/icons/icon12.png" alt="Icon 12"></div>
+                <h3 id="dst12">Planificación y gestión de cosechas</h3>
+                <p id="dsc12">Análisis predictivo para planificar las fechas de siembra y cosecha, y optimización de la gestión de inventarios basados en predicciones de rendimiento.</p>
+            </div>
+        </div>
+        <div class="contact-container">
+            <p id="dsn1">¿Qué objetivos deseas alcanzar con la ciencia de datos?</p>
+            <p id="dsn2">Nuestra competencia y experiencia no se limitan a los casos de uso descritos. Envíanos un mensaje, y nuestros consultores te explicarán cómo se puede aplicar la ciencia de datos en tu caso.</p>
+            <a id="dsn3" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@australmetrics.cl&su=Consulta%20sobre%20Servicios%20de%20Ciencia%20de%20Datos&body=Hola,%20estoy%20interesado%20en%20sus%20servicios." target="_blank" class="btn">Compartir mis necesidades</a>
+        </div>
+    </section>
+
+    <!-- Technologies --------------------------------------------->
+     <section id="technologies" class="technologies">
+        <div class="technologies-header">
+            <h2 id="technologies-title">Métodos y Tecnologías que Usamos</h2>
+            <p id="tech-title-0">Para obtener los valiosos conocimientos que sus datos esconden, aplicamos tanto métodos estadísticos probados como algoritmos de aprendizaje automático elaborados, incluidas técnicas intrincadas como redes neuronales profundas con más de 10 capas ocultas.</p>
+        </div>
+        <div class="methods">
+            <h3 id="method-title">Métodos</h3>
+            <div class="method-container">
+                <div class="method-box">
+                    <h4 id="tech-title-1">Métodos Estadísticos</h4>
+                    <ul>
+                        <li id="tech-title-1a"><span>Estadísticas descriptivas</span>, por ejemplo, para resumir datos de clientes o identificar valores atípicos.</li>
+                        <li id="tech-title-1b"><span>ARMA y ARIMA</span>, para predecir ventas, precios y demanda.</li>
+                        <li id="tech-title-1c"><span>Análisis de componentes principales (PCA)</span>, por ejemplo, en la reducción de dimensionalidad de datos multiespectrales de imágenes satelitales de cultivos o en la identificación de factores clave que influyen en la calidad del agua en sistemas acuícolas.</li>
+                        <li id="tech-title-1d"><span>Regresión lineal y no lineal</span>, en la modelación de relación entre variables como en la relación entre variables climáticas y rendimiento de cultivos o en el análisis de la influencia de parámetros de alimentación en el crecimiento de peces.</li>
+                        <li id="tech-title-1e"><span>Análisis de varianza (ANOVA)</span>, por ejemplo, en la comparación de eficacia de diferentes tratamientos fitosanitarios en cultivos o en la evaluación de impacto de distintos métodos de cultivo en la producción acuícola.</li>
+                        <li id="tech-title-1f"><span>Árboles de decisión</span>, para la clasificación de suelos agrícolas según idoneidad para diferentes cultivos o la predicción de probabilidad de brotes de enfermedades en piscifactorías.</li>
+                    </ul>
+                </div>
+                <div class="method-box">
+                    <h4 id="tech-title-2">Métodos de Machine Learning no basados en redes neuronales</h4>
+                    <ul>
+                        <li id="tech-title-2a"><span>Árboles de decisión</span>, para clasificar datos de clientes y predecir la probabilidad de falla del equipo.</li>
+                        <li id="tech-title-2b"><span>Máquinas de soporte vectorial (SVM)</span>, para detectar fraudes o analizar el sentimiento del cliente.</li>
+                        <li id="tech-title-2c"><span>Random Forests</span>, por ejemplo, en la predicción de rendimiento de cultivos basado en datos históricos y condiciones actuales. También sirve para identificar factores críticos en la propagación de enfermedades en cultivos o en la clasificación de calidad de productos acuícolas.</li>
+                        <li id="tech-title-2d"><span>Gradient Boosting Machines</span>, en la optimización de la dosificación de fertilizantes y/o pesticidas, predicción de crecimiento de algas nocivas o en la estimación de biomasa de peces en jaulas marinas mediantes sensores.</li>
+                        <li id="tech-title-2e"><span>K-Means y otros algoritmos de clustering</span>, por ejemplo, en la segmentación de terrenos agrícolas basadas en características de suelo y microclima o en la agrupación de granjas acuícolas según patrones de producción y manejo.</li>
+                        
+                    </ul>
+                </div>      
+                <div class="method-box">
+                    <h4 id="tech-title-3">Redes Neuronales, incluyendo Aprendizaje Profundo</h4>
+                    <ul>
+                        <li id="tech-title-3a"><span>Redes Neuronales Convolucionales</span>, para análisis de imágenes y clasificación de objetos.</li>
+                        <li id="tech-title-3b"><span>Redes Neuronales Recurrentes</span>, para análisis de series temporales o procesamiento de lenguaje natural.</li>
+                        <li id="tech-title-3c"><span>Autoencoders</span>, por ejemplo, en la detección de anomalías en datos de sensores IoT en granjas inteligentes, compresión y reconstrucción de datos de monitoreo ambiental en acuicultura o en reducción de reuido de imágenes hiperespectrales de cultivos.</li>
+                        
+                    </ul>
+                </div>          
+                <div class="method-box">
+                    <h4 id="tech-title-4">Aprendizaje Profundo para Visión por Computador</h4>
+                    <ul>
+                        <li id="tech-title-4a"><span>Redes Neuronales Convolucionales (CNN)</span>, por ejemplo, para detección temprana de enfermedades en cultivos y peces mediante análisis de imágenes. También se puede ocupar para clasificación de especies de algas, entre otros.</li>
+                        <li id="tech-title-4b"><span>Redes R-CNN y YOLO</span>, por ejemplo, para detección y conteo en tiempo real de peces en jaulas acuícolas y para identificación de plagas y malezas en campos agrícolas.</li>
+                        <li id="tech-title-4c"><span>Autoencoders y GANs</span>, en generación de imágenes sintéticas para aumentar conjuntos de datos de enfermedades poco comunes en plantas y animales. Sirve, además, para detección de anomalías en imágenes satelitales de cultivos.</li>
+                    </ul>
+                </div>
+                <div class="method-box">
+                    <h4 id="tech-title-5">Modelos de Series Temporales y Forecasting Avanzado</h4>
+                    <ul>
+                        <li id="tech-title-5a"><span>LSTM y GRU</span>, en la predicción de rendimientos de cultivos a largo plazo o en la modelación de patrones de crecimiento en acuicultura.</li>
+                        <li id="tech-title-5b"><span>Transformer y Atención</span>, en el análisis de secuencias complejas en datos genómicos de cultivos y especies acuícolas.</li>
+                        <li id="tech-title-5c"><span>Prophet y TBATS</span>, usado en el forecasting de demanda de productos agrícolas con alta estacionalidad o en el modelado de ciclos de producción acuícola.</li>
+                    </ul>
+                </div>
+                <div class="method-box">
+                    <h4 id="tech-title-6">Técnicas de Optimización y Toma de Decisiones</h4>
+                    <ul>
+                        <li id="tech-title-6a"><span>Aprendizaje por Refuerzo Profundo</span>, por ejemplo, en la optimización de estrategias de riego y fertilización o en el control automático de sistemas de alimentación en acuicultura.</li>
+                        <li id="tech-title-6b"><span>Algoritmos Genéticos y Evolución Diferencial</span>, en la optimización de rutas de distribución de productos agrícolas perecederos o en el diseño de dietas óptimas en acuicultura.</li>
+                        <li id="tech-title-6c"><span>Optimización Bayesiana</span>, por ejemplo, en el ajuste fino de hiperparámetros en modelos de predicción de rendimiento de cultivos o en la optimización de condiciones de crecimiento en sistemas acuapónicos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="technologies-list">
+            <h3 id="tech-title">Tecnologías</h3>
+            <div class="tech-container">
+                <div class="tech-box">
+                    <h4 id="tech-box-1">Lenguajes de Programación</h4>
+                    <div class="tech-logos">
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/python.svg" alt="Python" data-experience="+10 años, 35 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/rstudio.svg" alt="R" data-experience="8 años, 20 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/sql.svg" alt="SQL" data-experience="6 años, 15 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/javascript.svg" alt="JavaScript" data-experience="7 años, 25 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/yaml.png" alt="Yaml" data-experience="7 años, 25 proyectos completados">
+                        </a>                          
+                    </div>
+                </div>
+                <div class="tech-box">
+                    <h4 id="tech-box-2">Bibliotecas/Frameworks</h4>
+                    <div class="tech-logos">
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/tensorflow.svg" alt="TensorFlow" data-experience="5 años, 18 proyectos completados">
+                        </a>                                   
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/scikit-learn.svg" alt="Scikit-learn" data-experience="6 años, 22 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/fastapi.svg" alt="fastapi" data-experience="6 años, 22 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/openzeppelin-logo-vector.svg" alt="OpenZeppelin" data-experience="5 años, 14 proyectos completados">
+                        </a>    
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/flask.svg" alt="Flask" data-experience="4 años, 10 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/geopandas_logo.svg" alt="geopandas" data-experience="4 años, 10 proyectos completados">
+                        </a>   
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/manim.png" alt="Manim" data-experience="5 años, 14 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/matplotlib.svg" alt="matplotlib" data-experience="5 años, 14 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/pytorch-2.svg" alt="PyTorch" data-experience="3 años, 10 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/numpy.svg" alt="Numpy" data-experience="5 años, 14 proyectos completados">
+                        </a> 
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/onnx.png" alt="Onnx" data-experience="5 años, 14 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/OpenCV.svg" alt="OpenCV" data-experience="5 años, 14 proyectos completados">
+                        </a>                        
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/pandas.svg" alt="Pandas" data-experience="5 años, 14 proyectos completados">
+                        </a>                        
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/keras.svg" alt="Keras" data-experience="4 años, 12 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/SCIPY_2.svg" alt="Scipy" data-experience="5 años, 14 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/seaborn.svg" alt="Seaborn" data-experience="5 años, 14 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/web3js-seeklogo.svg" alt="Web3js" data-experience="5 años, 14 proyectos completados">
+                        </a>     
+                    </div>
+                </div>
+                <div class="tech-box">
+                    <h4 id="tech-box-3">Herramientas/Plataformas</h4>
+                    <div class="tech-logos">
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/ethereum.svg" alt="Ethereum" data-experience="5 años, 16 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/ganache.svg" alt="Ganache" data-experience="4 años, 10 proyectos completados">
+                        </a>                      
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/kubernetes.png" alt="Kubernetes" data-experience="5 años, 14 proyectos completados">
+                        </a> 
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/github.svg" alt="Github" data-experience="5 años, 14 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/aws.svg" alt="aws" data-experience="5 años, 14 proyectos completados">
+                        </a>  
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/ipfs.svg" alt="IPFS" data-experience="5 años, 14 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/snowflake-logo.svg" alt="Snowflake" data-experience="5 años, 14 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/git.svg" alt="Git" data-experience="5 años, 14 proyectos completados">
+                        </a>                                             
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/azure.png" alt="Azure" data-experience="5 años, 14 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/mongodb.svg" alt="MongoDB" data-experience="5 años, 14 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/postgresql.svg" alt="PostgreSQL" data-experience="5 años, 14 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/power-bi.svg" alt="PowerBI" data-experience="5 años, 14 proyectos completados">
+                        </a>                        
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/truffle-seeklogo.svg" alt="Truffle" data-experience="5 años, 14 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/wandb.png" alt="weights-and-biases" data-experience="5 años, 14 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/docker.svg" alt="Docker" data-experience="5 años, 14 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/aave.svg" alt="aave" data-experience="5 años, 14 proyectos completados">
+                        </a>
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/apache-spark.svg" alt="Apache" data-experience="5 años, 14 proyectos completados">
+                        </a>                        
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/dvc.svg" alt="DVC" data-experience="6 años, 18 proyectos completados">
+                        </a> 
+                        <a href="#" class="t-item-group-technology-content has-popup js-track-click" data-track-element="icon (with popup)">
+                            <img src="img/logos/chainlink.svg" alt="Chainlink" data-experience="6 años, 18 proyectos completados">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="t-popup" data-nosnippet></div>
+     </section>
+
+     <!-- Costs ------------------------------------------------------>
+    <section id="costs" class="costs">
+        <h2 id="costs-title">¿Cuánto cuesta una solución de Data Science?</h2>
+        <p id="costs-parr">El costo de tu iniciativa de data science dependerá de la opción de servicio que necesites y de la complejidad general del proyecto.</p>
+        
+        <div class="cost-container">
+            <!-- Item 1 -->
+            <div class="cost-item">
+                <h3 id="costs-parr-1">Desarrollar un componente separado de data science</h3>
+                <p id="cp1">Coste: <span class="cost-amount">$ USD 1200 - $ USD 2500</span></p>
+                <div class="details-toggle">
+                    <a id="cp1coste"  href="#" class="show-details">VER QUÉ COMPONE EL COSTE</a>
+                    <div class="details">
+                        <ul>
+                            <li id="cp1a">Pronóstico: $300 - $500</li>
+                            <li id="cp1b">Predicción: $200 - $400</li>
+                            <li id="cp1c">Optimización y planificación: $400 - $600</li>
+                            <li id="cp1d">Clasificación (por ejemplo, de clientes, proveedores, puntos de venta): $250 - $450</li>
+                            <li id="cp1e">Detección de anomalías: $200 - $400</li>
+                            <li id="cp1f">Detección de fraude: $300 - $500</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="cost-item">
+                <h3 id="costs-parr-2">Desarrollo integral de una solución basada en data science</h3>
+                <p id="cp2">Coste: <span class="cost-amount">$ USD 3000 - $ USD 4500</span></p>
+                <div class="details-toggle">
+                    <a id="cp2coste" href="#" class="show-details">VER QUÉ COMPONE EL COSTE</a>
+                    <div class="details">
+                        <ul>
+                            <li id="cp2a">Optimización de inventario: $500 - $1000</li>
+                            <li id="cp2b">Optimización de precios minoristas: $700 - $1200</li>
+                            <li id="cp2c">Planificación de rutas: $400 - $800</li>
+                            <li id="cp2d">Software personalizado de modelado financiero: $600 - $1200</li>
+                            <li id="cp2e">Mantenimiento predictivo: $500 - $900</li>
+                            <li id="cp2f">Seguros predictivos: $700 - $1400</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact ------------------------->
+        <section id="contact" class="contact">
+            <h2 id="contact-title">Contáctanos</h2>
+            <form action="procesar_formulario.php" method="POST">
+                <label id="contact-1" for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label id="contact-2" for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label id="contact-3" for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button id="contact-4" type="submit" class="btn">Enviar</button>
+            </form>
+        </section>
+
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Austral Metrics</h3>
+            <p id="footer1">Soluciones basadas en la Ciencia de Datos para agricultura y acuicultura</p>
+          </div>
+          <div class="footer-section">
+            <h3 id="footer2">Enlaces rápidos</h3>
+            <ul>
+              <li><a id="footer3" href="#home">Inicio</a></li>
+              <li><a id="footer4" href="#services">Servicios</a></li>
+              <li><a id="footer5" href="#portfolio">Portafolio</a></li>
+              <li><a id="footer6" href="#use-cases">Casos de uso</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3 id="footer7">Contacto</h3>
+            <p id="footer8">Email: info@australmetrics.com</p>
+            <p id="footer9">Teléfono: +56 9 1234 5678</p>
+          </div>
+          <div class="footer-section">
+            <h3 id="footer10">Síguenos</h3>
+            <div class="social-icons">
+              <a href="#" class="social-icon"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="social-icon"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <!-- Enlaces de Compartir en Redes Sociales -->
+            <div class="social-share">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.australmetrics.cl/" target="_blank">Compartir en Facebook</a> 
+                <a href="https://twitter.com/intent/tweet?url=https://www.australmetrics.cl/" target="_blank">Compartir en Twitter</a> 
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.australmetrics.cl/" target="_blank">Compartir en LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p id="footer11">&copy; 2024 AustralMetrics. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+
+
+    
+<!-- Custom js file link-->
+<script src="scripts.js"></script>
+</body>
+</html>

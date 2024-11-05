@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+	<loc>https://australmetrics.cl/</loc>
+	<lastmod>2024-10-07T04:32:21+01:00</lastmod>
+	<priority>1.0</priority>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/AustralMetricsRecortado.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/Languages/triangle.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/Languages/espa%C3%B1a.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/Languages/eng.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/Languages/francia.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/Languages/china.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/Home.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/Services/data-science_consulting.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/Services/software-implementation.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/Services/data-science-evolution.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/Services/data-science_support.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/Portfolio/drone.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/Portfolio/monitoring_salmon.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/Portfolio/precision_riego.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/Portfolio/trazabilidad_blockchain.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/Portfolio/vineyard.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/icons/icon1.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/icons/icon2.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/icons/icon3.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/icons/icon4.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/icons/icon5.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/icons/icon6.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/icons/icon7.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/icons/icon8.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/icons/icon9.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/icons/icon10.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/icons/icon11.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/icons/icon12.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/logos/python.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/logos/rstudio.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/logos/sql.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/logos/javascript.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/logos/tensorflow.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/logos/keras.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/logos/pytorch1.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/logos/scikit-learn.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/logos/django.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/logos/flask.svg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/logos/manim.png</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/img/logos/dvc.svg</image:loc>
+	</image:image>
+</url>
+<url>
+	<loc>https://australmetrics.cl/FAQ/faq.html</loc>
+	<lastmod>2024-10-07T04:32:21+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://australmetrics.cl/portfolio/portfolio1.html</loc>
+	<lastmod>2024-10-07T04:32:21+01:00</lastmod>
+	<priority>0.8</priority>
+	<image:image>
+			<image:loc>https://australmetrics.cl/portfolio/images/proyecto.jpg</image:loc>
+	</image:image>
+	<image:image>
+			<image:loc>https://australmetrics.cl/portfolio/images/modelo.jpg</image:loc>
+	</image:image>
+</url>
+<url>
+	<loc>https://australmetrics.cl/portfolio/portfolio2.html</loc>
+	<lastmod>2024-10-07T04:32:21+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://australmetrics.cl/portfolio/portfolio3.html</loc>
+	<lastmod>2024-10-07T04:32:21+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://australmetrics.cl/portfolio/portfolio4.html</loc>
+	<lastmod>2024-10-07T04:32:21+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://australmetrics.cl/portfolio/portfolio5.html</loc>
+	<lastmod>2024-10-07T04:32:21+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://australmetrics.cl/index.html</loc>
+	<lastmod>2024-10-07T04:32:23+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+</urlset>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Predicción de Biomasa de Cultivos</title>
+    <link rel="icon" href="/img/favicon/favicon-96x96.png" type="image">
+    <link rel="apple-touch-icon" href="/img/favicon/apple-icon-120x120.png">
+    <link rel="canonical" href="https://australmetrics.cl/portfolio/portfolio1.html">
+
+    <!-- Preload de Google Fonts y carga asincrónica -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Sumana:wght@400&display=swap" rel="stylesheet" async>
+
+    <!-- Precarga de Font Awesome de manera eficiente -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+
+    <!-- Carga diferida del CSS de Prism -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css" as="style" onload="this.rel='stylesheet'">
+
+    <!-- CSS personalizado -->
+    <style>
+        /* Estilos básicos */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #f8f9fa;
+            --text-color: #333;
+            --light-gray: #e9ecef;
+            --border-color: #dee2e6;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: white;
+            text-align: justify;
+            padding: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;                  
+        }
+        .header h1 {
+            font-family: 'Sumana', serif;
+            font-size: 2.3em;
+            text-align: center;
+            margin: 0;
+            padding-left: 0.2em; 
+            padding-top: 0.23em;          
+        }       
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding-top: 8em;
+        }
+        .section {
+            margin-bottom: 40px;   
+            text-align: center;         
+        }
+        .section li {
+            text-align: left;
+        }
+        .section-title {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        .back-button {
+            position: fixed;
+            top: 43px;
+            left: 20px;
+            background-color: #004484;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+        .back-button i {
+            margin-right: 8px; /* Espacio entre la flecha y el texto */
+        }
+        .back-button:hover {
+            background-color: #003366;
+        }
+        .subsection-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .code-snippet {
+            background-color: var(--light-gray);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            overflow-x: auto;
+        }
+        .testimonial {
+            background-color: var(--light-gray);
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .tech-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .tech-tool-item {
+            background-color: white;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .tech-tool-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        .tech-tool-icon {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .footer {
+            background-color: var(--text-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .step-icon {
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .p2 {
+            text-align: left;
+        }
+        h3 {
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Mejoras en eficiencia de riego utilizando modelo reducido adaptativo</h1>
+        <a href="/index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Volver
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2 class="section-title">Descripción del Proyecto</h2>            
+            <p class="p2">Se presenta un enfoque detallado sobre la estimación de la humedad del suelo en sistemas agro-hidrológicos a gran escala, especialmente en el contexto de la agricultura de precisión. El objetivo principal del trabajo es mejorar la eficiencia del riego utilizando un modelo reducido adaptativo, basado en técnicas de filtrado de Kalman extendido (EKF).</p>
+            <!-- <p class="p2">Solución: Se propone un sistema que:</p>
+            <ul>
+                <li>Segmenta los peces planos en partes de cabeza, aletas y cuerpo.</li>
+                <li>Aumenta el conjunto de datos utilizando GAN para generar imágenes realistas de enfermedades.</li>
+                <li>Utiliza YOLOv8 para la detección de enfermedades, mejorando el rendimiento mediante la segmentación y la ampliación de datos.</li>
+            </ul> -->
+            <img class="p3"  src="/img/Portfolio/portfolio3.webp" alt="Proyecto de detección de enfermedades" width="600" height="400" style="border-radius: 4px;" loading="lazy">
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Enfoque Técnico</h2>
+            <h3 class="subsection-title">
+                <i class="fas fa-image step-icon"></i>
+                Paso 1: Descripción de sistemas agro-hidrológicos y dinámica del agua en el suelo
+            </h3>
+            <p class="p2">Se hace una descripción de cómo el agua en el suelo interactúa con el entorno agrícola. La ecuación de Richards, utilizada para modelar las dinámicas del agua en el suelo, es clave para entender cómo factores como la irrigación, la lluvia, la evaporación y la transpiración afectan la distribución de la humedad en el campo. Este modelo es altamente complejo debido a la necesidad de discretizar el espacio en miles de nodos para simular con precisión la dinámica del agua en grandes áreas. <bold>Se muestra a continuación el Filtrado de Kalman Extendido como una técnica anexa.</p>
+            <div class="code-snippet">
+                <pre><code class="language-python">
+class ExtendedKalmanFilter:
+def __init__(self):
+    # Inicialización de matrices y parámetros
+    # Estado inicial (humedad del suelo) y covarianza inicial
+    self.state = np.array([[0.5]])  # Humedad inicial
+    self.covariance = np.eye(1) * 0.1  # Covarianza inicial
+    self.process_noise = np.eye(1) * 0.01  # Ruido del proceso
+    self.measurement_noise = np.eye(1) * 0.1  # Ruido de la medición
+
+    # Matrices del modelo
+    self.F = np.array([[1]])  # Matriz de transición de estado
+    self.H = np.array([[1]])  # Matriz de observación
+
+def predict(self, control_input=None):
+    # Predicción del nuevo estado
+    self.state = self.F @ self.state
+    if control_input is not None:
+        self.state += control_input  
+
+    # Predicción de la nueva covarianza
+    self.covariance = self.F @ self.covariance @ self.F.T + self.process_noise
+
+def update(self, measurement):
+    # Cálculo de la ganancia de Kalman
+    y_tilde = measurement - (self.H @ self.state)  # Residual
+    S = self.H @ self.covariance @ self.H.T + self.measurement_noise  # Covarianza de la innovación
+    K = self.covariance @ self.H.T @ np.linalg.inv(S)  # Ganancia de Kalman
+
+    # Actualización del estado y la covarianza
+    self.state += K @ y_tilde
+    self.covariance = (np.eye(len(K)) - K @ self.H) @ self.covariance
+
+# Ejemplo de uso del EKF
+if __name__ == "__main__":
+ekf = ExtendedKalmanFilter()
+
+# Ejemplo simulación de datos de entrada
+measurements = [0.6, 0.55, 0.65, 0.62, 0.58]  # Mediciones de humedad del suelo
+control_inputs = [0, 0, 0, 0, 0]  # Entradas de control (pueden ser riego, etc.)
+
+for measurement, control_input in zip(measurements, control_inputs):
+    ekf.predict(control_input)
+    ekf.update(measurement)
+    print(f"Estado estimado (humedad): {ekf.state[0][0]:.4f}")
+    print(f"Covarianza actual: {ekf.covariance[0][0]:.4f}")   
+                </code></pre>
+            </div>
+            <h3 class="subsection-title">
+                <i class="fas fa-arrow-up-from-bracket step-icon"></i>
+                Paso 2: Desafíos en la estimación de la humedad del suelo a gran escala
+            </h3>
+            <p class="p2">Uno de los mayores retos es la alta dimensionalidad del modelo al simular campos agrícolas grandes. Utilizar un sistema completo sin reducción del modelo genera una gran complejidad computacional, haciendo que las técnicas tradicionales de estimación como el EKF sean ineficientes. Además, hay pocas mediciones directas de humedad del suelo, lo que limita la observabilidad del sistema completo.</p>
+            <img class="p3" src="/img/Portfolio/portfolio3_dl1.webp" alt="Modelo de Data Augmentation" width="600" height="400" style="border-radius: 4px;" loading="lazy">           
+            <h3 class="subsection-title">
+                <i class="fas fa-chart-line step-icon"></i>
+                Paso 3: Reducción adaptativa del modelo
+            </h3>
+            <p class="p2">Para reducir la complejidad del sistema, se propone una técnica de reducción adaptativa del modelo basada en trayectorias de estado. Se agrupan los estados similares utilizando técnicas no supervisadas de aprendizaje automático, como el agrupamiento jerárquico, para crear un modelo reducido que sea más manejable y eficiente computacionalmente, pero que siga capturando la dinámica clave del sistema.</p>
+            <img class="p3" src="/img/Portfolio/portfolio3_dl2.webp" alt="Modelo de Segmentación" width="600" height="400" style="border-radius: 4px;" loading="lazy">
+
+            <h3 class="subsection-title">
+                <i class="fas fa-gears step-icon"></i>
+                Paso 4: Filtro de Kalman extendido adaptativo (EKF) para la estimación de la humedad
+            </h3>
+            <p class="p2">El modelo reducido es la base para un EKF adaptativo que estima la humedad del suelo en tiempo real utilizando mediciones limitadas de sensores en el campo. Cuando el error de predicción del modelo reducido supera un umbral predefinido, se ajusta automáticamente el modelo, asegurando que las predicciones permanezcan dentro de un margen de error aceptable.</p>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-chart-line step-icon"></i>
+                Paso 5: Validación mediante simulación en campos agrícolas a gran escala
+            </h3>
+            <p class="p2">El enfoque se valida utilizando simulaciones en un campo de 26.4 hectáreas. El sistema se discretiza en miles de nodos y se simulan las condiciones de riego y humedad en el suelo a lo largo de 30 días. Se comparan diferentes esquemas de reducción de modelos y se demuestra que el enfoque propuesto ofrece un balance óptimo entre precisión y eficiencia computacional.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Resultados y Beneficios</h2>
+            <ul>
+                <li><strong>Mejora en la precisión de la estimación con el enfoque propuesto:</strong> El enfoque basado en reducción adaptativa del modelo y el uso de un filtro de Kalman extendido (EKF) logró una significativa mejora en la precisión de la estimación de la humedad del suelo. El error absoluto medio (MAE) se mantuvo dentro del 5-10% para las configuraciones más óptimas.</li>
+                <li><strong>Eficiencia computacional:</strong> La reducción adaptativa del modelo logró disminuir considerablemente el tiempo de cómputo en comparación con métodos no adaptativos. En campos grandes (de hasta 20,400 nodos), el método propuesto pudo realizar estimaciones en 5 segundos por iteración, en comparación con los 2.2 segundos de un modelo no adaptativo, pero con mucha mayor precisión y adaptabilidad. </li>
+                <li><strong>Adaptabilidad a condiciones cambiantes:</strong> El enfoque adaptativo del modelo fue capaz de responder a condiciones de campo dinámicas, como cambios en la humedad del suelo debido a eventos de riego y precipitación. El estudio mostró que, utilizando el esquema de reducción adaptativa, el modelo reidentificaba y ajustaba automáticamente el número de nodos cuando el error superaba un umbral del 40% en la precisión de predicción. Esto permitió al modelo adaptarse y mantener la precisión, incluso cuando las condiciones del campo variaban significativamente a lo largo de los 30 días.</li>
+            </ul>
+        </div>
+        <div class="testimonial">
+            <p>"...logramos optimizar nuestros patrones de riego. Este modelo no solo estima la humedad del suelo, sino que también se adapta a las condiciones cambiantes del campo. Desde su implementación, hemos reducido el consumo de agua en un 40% y hemos incrementado el rendimiento de nuestros cultivos en un 25%."</p>
+            <p><strong>- Carlos Mendoza, propietario de fundo Chaudal</strong></p>
+        </div>
+        <div class="section">
+            <h2 id="tech-tools-section" class="section-title">Tecnologías y Herramientas</h2>
+            <div class="tech-tools-grid">
+                <div class="tech-tool-item">
+                    <i class="fab fa-python tech-tool-icon"></i>
+                    <h4>Python</h4>
+                    <p>Lenguaje principal de desarrollo</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-brain tech-tool-icon"></i>
+                    <h4>PyTorch</h4>
+                    <p>Framework de deep learning</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-chalkboard tech-tool-icon"></i>
+                    <h4>OpenCV</h4>
+                    <p>Framework de Procesamiento de imágenes</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-database tech-tool-icon"></i>
+                    <h4>PostgreSQL</h4>
+                    <p>Base de datos para almacenamiento</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-cloud tech-tool-icon"></i>
+                    <h4>Microsoft Azure</h4>
+                    <p>Infraestructura en la nube</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-brain tech-tool-icon"></i>
+                    <h4>Scikit-learn</h4>
+                    <p>Infraestructura en la nube</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-square-poll-vertical tech-tool-icon"></i>
+                    <h4>Pandas</h4>
+                    <p>Manejo y análisis de datos tabulares</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-cubes tech-tool-icon"></i>
+                    <h4>Numpy</h4>
+                    <p>Operaciones matemáticas sobre matrices y tensores, esencial para cálculos de deep learning</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-docker tech-tool-icon"></i>
+                    <h4>Docker</h4>
+                    <p>Para crear entornos consistentes y reproducibles durante el desarrollo y despliegue</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-code-fork tech-tool-icon"></i>
+                    <h4>DVC</h4>
+                    <p>Para el control de versiones de los datos y el modelo</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-qrcode tech-tool-icon"></i>
+                    <h4>FastAPI</h4>
+                    <p>Framework ligero para crear APIs RESTful y exponer el modelo como servicio web</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-shield tech-tool-icon"></i>
+                    <h4>SSL/TLS</h4>
+                    <p>Certificados de seguridad para asegurar las comunicaciones entre servicios</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-chart-bar tech-tool-icon"></i>
+                    <h4>Matplotlib</h4>
+                    <p>Visualización de datos</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-brain tech-tool-icon"></i>
+                    <h4>Ultralytics YOLOv8</h4>
+                    <p>Modelo de segmentación de imágenes y detección de objetos en tiempo real</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-code-branch tech-tool-icon"></i>
+                    <h4>Git</h4>
+                    <p>Control de versiones</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">¿Listo para optimizar tus cultivos?</h2>
+            <a href="#contact" class="cta-button">Solicitar una Demostración</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Austral Metrics. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Carga diferida de Prism JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js" defer></script>
+</body>
+</html>

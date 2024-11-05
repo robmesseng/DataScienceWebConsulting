@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Predicción de Biomasa de Cultivos</title>
+    <link rel="icon" href="/img/favicon/favicon-96x96.png" type="image">
+    <link rel="apple-touch-icon" href="/img/favicon/apple-icon-120x120.png">
+    <link rel="canonical" href="https://australmetrics.cl/portfolio/portfolio1.html">
+
+    <!-- Preload de Google Fonts y carga asincrónica -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Sumana:wght@400&display=swap" rel="stylesheet" async>
+
+    <!-- Precarga de Font Awesome de manera eficiente -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+
+    <!-- Carga diferida del CSS de Prism -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css" as="style" onload="this.rel='stylesheet'">
+
+    <!-- CSS personalizado -->
+    <style>
+        /* Estilos básicos */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #f8f9fa;
+            --text-color: #333;
+            --light-gray: #e9ecef;
+            --border-color: #dee2e6;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: white;
+            text-align: justify;
+            padding: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;                  
+        }
+        .header h1 {
+            font-family: 'Sumana', serif;
+            font-size: 2.3em;
+            text-align: center;
+            margin: 0;
+            padding-left: 1.5em; 
+            padding-top: 0.23em;          
+        }        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding-top: 8em;
+        }
+        .section {
+            margin-bottom: 40px;   
+            text-align: center;         
+        }
+        .section li {
+            text-align: left;
+        }
+        .section-title {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        .back-button {
+            position: fixed;
+            top: 43px;
+            left: 20px;
+            background-color: #004484;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+        .back-button i {
+            margin-right: 8px; /* Espacio entre la flecha y el texto */
+        }
+        .back-button:hover {
+            background-color: #003366;
+        }
+        .subsection-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .code-snippet {
+            background-color: var(--light-gray);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            overflow-x: auto;
+        }
+        .testimonial {
+            background-color: var(--light-gray);
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .tech-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .tech-tool-item {
+            background-color: white;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .tech-tool-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        .tech-tool-icon {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .footer {
+            background-color: var(--text-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .step-icon {
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .p2 {
+            text-align: left;
+        }
+        h3 {
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Sistema de Predicción de Biomasa de Cultivos</h1>
+        <a href="/index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Volver
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2 class="section-title">Descripción del Proyecto</h2>
+            <p class="p2">El proyecto se centra en predecir la biomasa de cultivos mediante el análisis de imágenes capturadas por drones. A través de técnicas de aprendizaje profundo, somos capaces de obtener datos precisos sobre el estado de los cultivos.</p>
+            <img src="/img/Portfolio/portfolio1.webp" alt="Proyecto de Biomasa" width="600" height="400" style="border-radius: 4px;" loading="lazy">
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Enfoque Técnico</h2>
+            <h3 class="subsection-title">
+                <i class="fas fa-image step-icon"></i>
+                Paso 1: Preprocesamiento de Imágenes
+            </h3>
+            <p class="p2">Implementamos un algoritmo avanzado para normalizar y mejorar la calidad de las imágenes capturadas por drones.</p>
+            <div class="code-snippet">
+                <pre><code class="language-python">
+import torch
+import cv2
+import psycopg2
+import pytorch_lightning as pl
+from torch.utils.data import Dataset, DataLoader
+import numpy as np
+
+# Clase de preprocesamiento de imágenes
+class BiomassImagePreprocessor(Dataset):
+def __init__(self, image_data, drone_altitudes, reference_altitude=6, crop_size=256):
+    self.image_data = image_data
+    self.drone_altitudes = drone_altitudes
+    self.reference_altitude = reference_altitude
+    self.crop_size = crop_size
+
+def preprocess_image(self, image, drone_altitude):
+    scaling_factor = self.reference_altitude / drone_altitude
+    crop_dim = int(self.crop_size * scaling_factor)
+    height, width, _ = image.shape
+    start_x = (width // 2) - (crop_dim // 2)
+    start_y = (height // 2) - (crop_dim // 2)
+    crop_img = image[start_y:start_y + crop_dim, start_x:start_x + crop_dim]
+    upscale_img = cv2.resize(crop_img, (2048, 2048), interpolation=cv2.INTER_CUBIC)
+    return upscale_img
+
+def __len__(self):
+    return len(self.image_data)
+
+def __getitem__(self, idx):
+    image = self.image_data[idx]
+    drone_altitude = self.drone_altitudes[idx]
+    preprocessed_image = self.preprocess_image(image, drone_altitude)
+    # Convierte imagen a tensor
+    preprocessed_image = torch.from_numpy(preprocessed_image).float().permute(2, 0, 1)
+    return preprocessed_image
+
+# Conexión a base de datos
+def load_data_from_postgresql(query, conn_params):
+conn = psycopg2.connect(**conn_params)
+cursor = conn.cursor()
+cursor.execute(query)
+data = cursor.fetchall()
+cursor.close()
+conn.close()
+return data
+
+# Parámetros de conexión a PostgreSQL
+conn_params = {
+"dbname": "biomass_db",
+"user": "postgres",
+"password": "password",
+"host": "localhost",
+"port": "5432"
+}
+
+# Ejemplo de consulta a la base de datos
+query = "SELECT image, drone_altitude FROM drone_images"
+                </code></pre>
+            </div>
+            <h3 class="subsection-title">
+                <i class="fas fa-robot step-icon"></i>
+                Paso 2: Modelo de Deep Learning
+            </h3>
+            <p class="p2">Utilizamos una arquitectura de red neuronal convolucional personalizada para extraer características relevantes de las imágenes procesadas.</p>
+            <img src="/img/Portfolio/porfolio1_deeplearning.webp" alt="Modelo de Deep Learning" width="600" height="400" style="border-radius: 4px;" loading="lazy">           
+            <h3 class="subsection-title">
+                <i class="fas fa-chart-line step-icon"></i>
+                Paso 3: Análisis de Imágenes
+            </h3>
+            <p class="p2">Utilizamos redes neuronales convolucionales (CNN) para analizar las imágenes y generar predicciones precisas sobre el rendimiento del cultivo.</p>
+            
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Resultados y Beneficios</h2>
+            <ul>
+                <li>Incremento del 20% en la precisión de las predicciones de biomasa.</li>
+                <li>Reducción del 15% en los costos operativos gracias a la optimización de recursos.</li>
+                <li>Optimización de recursos y aumento de la productividad agrícola</li>
+            </ul>
+        </div>
+        <div class="testimonial">
+            <p class="p2">"El Sistema de Predicción de Biomasa de Cultivos de Austral Metrics ha revolucionado nuestra forma de gestionar los cultivos. Hemos visto un aumento del 30% en la eficiencia de nuestros procesos y una mejora significativa en nuestras decisiones de manejo de cultivos."</p>
+            <p><strong>- Juan Pérez, Agricultor Senior</strong></p>
+        </div>
+        <div class="section">
+            <h2 id="tech-tools-section" class="section-title">Tecnologías y Herramientas</h2>
+            <div class="tech-tools-grid">
+                <div class="tech-tool-item">
+                    <i class="fab fa-python tech-tool-icon"></i>
+                    <h4>Python</h4>
+                    <p>Lenguaje principal de desarrollo</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-brain tech-tool-icon"></i>
+                    <h4>TensorFlow</h4>
+                    <p>Framework de deep learning</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-database tech-tool-icon"></i>
+                    <h4>PostgreSQL</h4>
+                    <p>Base de datos para almacenamiento</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-cloud tech-tool-icon"></i>
+                    <h4>AWS</h4>
+                    <p>Infraestructura en la nube</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-chart-bar tech-tool-icon"></i>
+                    <h4>Matplotlib</h4>
+                    <p>Visualización de datos</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-code-branch tech-tool-icon"></i>
+                    <h4>Git</h4>
+                    <p>Control de versiones</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">¿Listo para optimizar tus cultivos?</h2>
+            <a href="#contact" class="cta-button">Solicitar una Demostración</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Austral Metrics. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Carga diferida de Prism JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js" defer></script>
+</body>
+</html>

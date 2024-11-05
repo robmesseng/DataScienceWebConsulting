@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Predicción de Biomasa de Cultivos</title>
+    <link rel="icon" href="/img/favicon/favicon-96x96.png" type="image">
+    <link rel="apple-touch-icon" href="/img/favicon/apple-icon-120x120.png">
+    <link rel="canonical" href="https://australmetrics.cl/portfolio/portfolio1.html">
+
+    <!-- Preload de Google Fonts y carga asincrónica -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Sumana:wght@400&display=swap" rel="stylesheet" async>
+
+    <!-- Precarga de Font Awesome de manera eficiente -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+
+    <!-- Carga diferida del CSS de Prism -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-okaidia.min.css" as="style" onload="this.rel='stylesheet'">
+
+    <!-- CSS personalizado -->
+    <style>
+        /* Estilos básicos */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #f8f9fa;
+            --text-color: #333;
+            --light-gray: #e9ecef;
+            --border-color: #dee2e6;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: white;
+            text-align: justify;
+            padding: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;                  
+        }
+        .header h1 {
+            font-family: 'Sumana', serif;
+            font-size: 2.3em;
+            text-align: center;
+            margin: 0;
+            padding-left: 3.5em; 
+            padding-top: 0.23em;          
+        }        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding-top: 8em;
+        }
+        .section {
+            margin-bottom: 40px;   
+            text-align: center;         
+        }
+        .section li {
+            text-align: left;
+        }
+        .section-title {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+        }
+        .back-button {
+            position: fixed;
+            top: 43px;
+            left: 20px;
+            background-color: #004484;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+        .back-button i {
+            margin-right: 8px; /* Espacio entre la flecha y el texto */
+        }
+        .back-button:hover {
+            background-color: #003366;
+        }
+        .subsection-title {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        .code-snippet {
+            background-color: var(--light-gray);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+            overflow-x: auto;
+        }
+        .testimonial {
+            background-color: var(--light-gray);
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .tech-tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .tech-tool-item {
+            background-color: white;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .tech-tool-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        .tech-tool-icon {
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .footer {
+            background-color: var(--text-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .step-icon {
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .p2 {
+            text-align: left;
+        }
+        h3 {
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Plataforma Descentralizada para la Gestión Integral de Agricultura y Comercialización de Productos</h1>
+        <a href="/index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Volver
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2 class="section-title">Descripción del Proyecto</h2>            
+            <p class="p2">AgroChain es una plataforma descentralizada que integra blockchain con agricultura de precisión, finanzas descentralizadas (DeFi), y gestión de cadena de suministro. El proyecto tiene como objetivo proporcionar una plataforma que permita a agricultores, inversores, distribuidores y consumidores interactuar en una red blockchain donde la trazabilidad de productos, la tokenización de terrenos, la automatización de pagos, y la certificación de productos sostenibles se gestionan de manera transparente y eficiente. La complejidad del proyecto reside en la integración de diversas tecnologías para facilitar procesos como la tokenización de tierras, la financiación descentralizada para agricultores, el análisis predictivo de rendimiento de cultivos mediante machine learning, y la gestión en tiempo real de la cadena de suministro agrícola.</p>
+            <!-- <p class="p2">Solución: Se propone un sistema que:</p>
+            <ul>
+                <li>Segmenta los peces planos en partes de cabeza, aletas y cuerpo.</li>
+                <li>Aumenta el conjunto de datos utilizando GAN para generar imágenes realistas de enfermedades.</li>
+                <li>Utiliza YOLOv8 para la detección de enfermedades, mejorando el rendimiento mediante la segmentación y la ampliación de datos.</li>
+            </ul> -->
+            <img class="p3"  src="/img/Portfolio/portfolio4.webp" alt="Proyecto de Blockchain" width="600" height="400" style="border-radius: 4px;" loading="lazy">
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Enfoque Técnico</h2>
+            <h3 class="subsection-title">
+                <i class="fas fa-image step-icon"></i>
+                Paso 1: Recolección de Datos y Análisis de Predicciones Agrícolas
+            </h3>
+            <p class="p2">Se utiliza agricultura de precisión para recolectar datos sobre las condiciones del suelo, el clima, y el rendimiento de los cultivos, lo que alimentará modelos predictivos para pronosticar el rendimiento futuro y gestionar la asignación de recursos.</p>
+            <ul>
+                <li>Sensores IoT en los campos recopilan datos sobre humedad del suelo, temperatura, PH, y otros factores importantes.</li>
+                <li>Se integran imágenes satelitales y datos meteorológicos en tiempo real para predecir las condiciones de crecimiento mediante modelos de machine learning.</li>
+                <li>Estos datos se almacenan en una blockchain privada, lo que garantiza la inmutabilidad y autenticidad de los datos recogidos, que luego serán utilizados en los contratos inteligentes para automatizar decisiones futuras.</li>
+            </ul>
+            <div class="code-snippet">
+                <pre><code class="language-python">
+// Contrato para registrar datos de sensores en la blockchain
+pragma solidity ^0.8.0;
+                        
+contract SensorDataRegistry {
+    struct SensorData {
+    uint256 timestamp;
+    string sensorType;
+    string data;
+    }
+    mapping(uint256 => SensorData) public sensorData;
+                            
+    function recordSensorData(uint256 fieldId, string memory sensorType, string memory data) public {
+        sensorData[fieldId] = SensorData(block.timestamp, sensorType, data);
+        }
+}                        
+                </code></pre>
+            </div>
+            <h3 class="subsection-title">
+                <i class="fas fa-arrow-up-from-bracket step-icon"></i>
+                Paso 2: Tokenización de Terrenos y Activos Agrícolas
+            </h3>
+            <p class="p2">Los terrenos y activos agrícolas son tokenizados, lo que permite a los inversores comprar participaciones fraccionadas de granjas o maquinaria agrícola.</p>
+            <ul>
+                <li>Cada terreno agrícola se divide en tokens digitales ERC-721 (NFTs no fungibles) que representan la propiedad fraccionada.</li>
+                <li>Los agricultores que buscan financiación pueden ofrecer sus terrenos o activos como tokens para ser comprados por inversores, facilitando la financiación sin depender de grandes instituciones bancarias.</li>
+                <li>Los inversores reciben recompensas automáticas (rendimientos o pagos) proporcionalmente a sus participaciones mediante contratos inteligentes.</li>
+            </ul>
+            <img class="p3" src="/img/Portfolio/portfolio4_dl1.webp" alt="Tokenización Referencial" width="600" height="400" style="border-radius: 4px;" loading="lazy">           
+            <h3 class="subsection-title">
+                <i class="fas fa-chart-line step-icon"></i>
+                Paso 3: Certificación y Trazabilidad de Productos
+            </h3>
+            <p class="p2">La trazabilidad de productos agrícolas desde la siembra hasta el consumidor final es completamente transparente en la blockchain. Los productos agrícolas sostenibles se certifican mediante contratos inteligentes que garantizan la conformidad con normas ambientales.</p>
+            <img class="p3" src="/img/Portfolio/portfolio4_dl2.webp" alt="Trazabilidad de productos agrícolas" width="600" height="400" style="border-radius: 4px;" loading="lazy">
+
+            <h3 class="subsection-title">
+                <i class="fas fa-gears step-icon"></i>
+                Paso 4: Financiación Descentralizada (DeFi) para Agricultores
+            </h3>
+            <p class="p2">Los agricultores acceden a financiación mediante DeFi. Pueden pedir préstamos utilizando sus tokens de tierras agrícolas como colateral. Inversores globales pueden ofrecer liquidez a los agricultores mediante contratos inteligentes automatizados.</p>
+
+            <h3 class="subsection-title">
+                <i class="fas fa-chart-line step-icon"></i>
+                Paso 5: Venta Automatizada de Cosechas y Distribución de Ganancias
+            </h3>
+            <p class="p2">Los agricultores venden automáticamente las cosechas a través de la plataforma y distribuyen ganancias a los inversores en proporción a la cantidad de tokens de tierra que poseen.</p>
+            <div class="code-snippet">
+                <pre><code class="language-python">
+// Contrato para distribuir automáticamente ganancias de ventas
+pragma solidity ^0.8.0;
+
+contract ProfitDistribution {
+    mapping(address => uint256) public tokenHoldings;
+    uint256 public totalTokens;
+    
+    function distributeProfits() public payable {
+        uint256 profitPerToken = msg.value / totalTokens;
+        
+        for (uint i = 0; i < totalTokens; i++) {
+            address investor = // obtener dirección del inversor
+            uint256 holdings = tokenHoldings[investor];
+            payable(investor).transfer(holdings * profitPerToken);
+        }
+    }
+}                        
+                </code></pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Resultados y Beneficios</h2>
+            <ul>
+                <li><strong>Resultado estimado:</strong>Un incremento del 35% en las inversiones agrícolas a través de la tokenización en el primer año, logrando más de $15 millones en inversiones fraccionadas.</li>
+                <li><strong>Reducción de la Burocracia y Transparencia en la Cadena de Suministro:</strong>Una reducción del 40% en los costos administrativos y del 60% en el tiempo de certificación de productos orgánicos y sostenibles, lo que permitió que los agricultores dedicaran más tiempo y recursos a la producción.</li>
+                <li><strong>Eficiencia en la Distribución de Ganancias a Inversores:</strong> Se logró una distribución automática de más de $5 millones en ganancias a más de 1,200 inversores en el primer año, con un ahorro de 25% en costos de transacción en comparación con los métodos financieros tradicionales. Los inversores recibieron sus pagos de manera rápida y segura a través de criptomonedas, lo que fomentó una mayor participación y aumentó la liquidez del mercado agrícola, facilitando el intercambio de participaciones de tierra en un 35% más que los métodos tradicionales.</li>
+            </ul>
+        </div>
+        <div class="testimonial">
+            <p>"Antes de AustralMetrics, financiar mi pequeña granja era casi imposible. Los bancos no estaban interesados en apoyar a alguien como yo, con terrenos modestos y sin historial crediticio sólido. Pero todo cambió cuando descubrí AustralMetrics. Decidí tokenizar parte de mis tierras y, para mi sorpresa, en menos de dos semanas ya había invertido gente de diferentes partes del mundo. Pude reunir más de $50,000 para comprar maquinaria nueva y mejorar mis cultivos de frutales. Además, la plataforma automatizó todo el proceso de distribución de las ganancias a mis inversores, lo que me permitió concentrarme en mi trabajo en lugar de preocuparme por la burocracia financiera. En menos de un año, mis ingresos aumentaron un 30%, y ahora estoy en conversaciones para expandir mi producción. Lo mejor de todo es la transparencia y confianza que genera. Mis compradores ahora pueden rastrear la calidad de mis productos y están dispuestos a pagar más por la certificación sostenible que AustralMetrics ofrece. Siento que, por primera vez, tengo el control de mi futuro financiero."</p>
+            <p><strong>- Juan Pérez, Agricultor Senior</strong></p>
+        </div>
+        <div class="section">
+            <h2 id="tech-tools-section" class="section-title">Tecnologías y Herramientas</h2>
+            <div class="tech-tools-grid">
+                <div class="tech-tool-item">
+                    <i class="fab fa-python tech-tool-icon"></i>
+                    <h4>Python</h4>
+                    <p>Lenguaje principal de desarrollo</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-brain tech-tool-icon"></i>
+                    <h4>Ethereum</h4>
+                    <p>Blockchain utilizada para desplegar contratos inteligentes</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-chalkboard tech-tool-icon"></i>
+                    <h4>OpenZeppelin</h4>
+                    <p>Biblioteca de contratos inteligentes para implementar ERC-721 y ERC-20</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-database tech-tool-icon"></i>
+                    <h4>MongoDB</h4>
+                    <p>Base de datos NoSQL utilizada para almacenar datos relacionados con inversores, productos y transacciones</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-cloud tech-tool-icon"></i>
+                    <h4>TensorFlow</h4>
+                    <p>Framework para implementar modelos de machine learning que predicen rendimiento agrícola</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-brain tech-tool-icon"></i>
+                    <h4>Flask/Django</h4>
+                    <p>Frameworks para desarrollar la plataforma web</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-square-poll-vertical tech-tool-icon"></i>
+                    <h4>Truffle</h4>
+                    <p>Framework para desarrollo y pruebas de contratos inteligentes</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-cubes tech-tool-icon"></i>
+                    <h4>Web3.js</h4>
+                    <p>Biblioteca JavaScript para interactuar con contratos inteligentes en Ethereum</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-docker tech-tool-icon"></i>
+                    <h4>Chainlink</h4>
+                    <p>Oráculo descentralizado que conecta datos del mundo real con contratos inteligentes</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-code-fork tech-tool-icon"></i>
+                    <h4>DeFi (Aave, Compound)</h4>
+                    <p>Protocolos descentralizados para préstamos y financiación de agricultores</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-qrcode tech-tool-icon"></i>
+                    <h4>IoT (Sensores agrícolas)</h4>
+                    <p>Sensores para la recolección de datos en campo sobre condiciones ambientales</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-shield tech-tool-icon"></i>
+                    <h4>IPFS</h4>
+                    <p>Sistema descentralizado para almacenamiento de datos relacionados con los productos agrícolas</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-chart-bar tech-tool-icon"></i>
+                    <h4>Satélites y Drones</h4>
+                    <p>Herramientas para obtener imágenes aéreas y monitorizar cultivos</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-brain tech-tool-icon"></i>
+                    <h4>Ganache</h4>
+                    <p>Blockchain local para pruebas de contratos inteligentes</p>
+                </div>
+                <div class="tech-tool-item">
+                    <i class="fas fa-code-branch tech-tool-icon"></i>
+                    <h4>Git</h4>
+                    <p>Control de versiones para los modelos de Machine Learning asociados a la agricultura</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">¿Listo para optimizar tus cultivos?</h2>
+            <a href="#contact" class="cta-button">Solicitar una Demostración</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Austral Metrics. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Carga diferida de Prism JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-python.min.js" defer></script>
+</body>
+</html>

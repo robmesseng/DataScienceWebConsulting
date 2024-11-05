@@ -1,0 +1,166 @@
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Contenedor gris para el título y el botón */
+.container-gray {
+  background-color: #e0e0e0;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+/* Estilos del título */
+.container-gray h1 {
+  color: #004484;
+  font-family: "Sumana", serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center; 
+  margin-bottom: 2rem;
+}
+
+/* Botón "Volver" en el header */
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #004484;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.back-button i {
+  margin-right: 8px; /* Espacio entre la flecha y el texto */
+}
+
+.back-button:hover {
+  background-color: #003366;
+}
+
+/* Contenedor negro para el código */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container h2 {
+  font-family: "Sumana", serif;
+  color: #056b05;
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.container p {
+  color: #ddd;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+pre {
+  background-color: #000;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-size: 14px;
+}
+
+code {
+  display: block;
+}
+
+/* Estilo para las imágenes de visualización */
+.image-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.graph-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Section ----------------- */
+.footer {
+  background-color: #004484;
+  color: #ffffff;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin-bottom: 20px;
+  min-width: 200px;
+  margin-right: 1.5rem;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
